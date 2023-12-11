@@ -72,6 +72,8 @@ export default function Home() {
         <SectionLayout>
           <TextSection />
         </SectionLayout>
+
+        <Footer />
       </div>
     </div>
   );
