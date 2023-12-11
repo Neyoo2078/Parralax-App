@@ -1,9 +1,8 @@
-"use client";
+'use client';
 
-import React, { useRef } from "react";
-import hover3d from "../utils/hover";
-import styled from "styled-components";
-import Image from "next/image";
+import React, { useRef } from 'react';
+import hover3d from '../utils/hover';
+import Image from 'next/image';
 
 function ZoomSection() {
   const hero = useRef<HTMLDivElement>(null);
@@ -27,39 +26,43 @@ function ZoomSection() {
   });
 
   return (
-    <ZoomStyled ref={hero}>
+    <div
+      ref={hero}
+      className="relative overflow-hidden rounded-[8px] border-[1px] border-[#424242]"
+    >
       <div
-        className="image"
+        className="rounded-[8px]"
         style={{
-          height: "50rem",
-          width: "100%",
+          height: '50rem',
+          width: '100%',
         }}
       >
         <Image
           src="/images/spiral.svg"
           alt="bulb tree"
+          className="rounded-[8px]"
           fill
           sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
           style={{
-            objectFit: "cover",
-            objectPosition: "center",
+            objectFit: 'cover',
+            objectPosition: 'center',
             transform: hover.transform,
             scale: 1.2,
-            background: "var(--color-bg)",
+            background: 'var(--color-bg)',
           }}
         />
 
         <Image
           src="/images/arm2.jpg"
           alt="bulb tree"
-          className="monkey"
+          className="absolute top-[10%] right-[3rem] rounded-[8px]"
           width={500}
           height={500}
           style={{
-            objectFit: "cover",
-            objectPosition: "50% 0%",
+            objectFit: 'cover',
+            objectPosition: '50% 0%',
             transform: hover2.transform,
             transition: hover2.transition,
           }}
@@ -68,44 +71,19 @@ function ZoomSection() {
         <Image
           src="/images/arm.jpg"
           alt="bulb tree"
-          className="smoke"
+          className="absolute top-[10%] left-[3rem] rounded-[8px] "
           width={500}
           height={500}
           style={{
-            objectFit: "cover",
-            objectPosition: "center",
+            objectFit: 'cover',
+            objectPosition: 'center',
             transform: hover3.transform,
             transition: hover3.transition,
           }}
         />
       </div>
-    </ZoomStyled>
+    </div>
   );
 }
 
-const ZoomStyled = styled.div`
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
-
-  .image {
-    border-radius: 8px;
-    img {
-      border-radius: 8px;
-    }
-  }
-
-  .monkey {
-    position: absolute;
-    top: 10%;
-    right: 3rem;
-  }
-
-  .smoke {
-    position: absolute;
-    top: 10%;
-    left: 3rem;
-  }
-`;
 export default ZoomSection;

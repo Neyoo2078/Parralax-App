@@ -12,6 +12,7 @@ import TextSection from '@/components/TextSection';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Footer from '@/components/Footer';
+import ZoomSection from '@/components/ZoomSection';
 export default function Home() {
   const video = React.useRef<HTMLDivElement>(null);
 
@@ -21,6 +22,8 @@ export default function Home() {
   });
 
   const opacity = useTransform(scrollYProgress, [0, 0.65, 1], [1, 1, 0]);
+
+  console.log({ opacity });
   const scale = useTransform(
     scrollYProgress,
     [0, 0.6, 0.8, 0.9],
@@ -66,6 +69,14 @@ export default function Home() {
             </div>
           </HorizontalWrapper>
         </SectionLayout>
+        <SectionLayout>
+          <TextSection />
+        </SectionLayout>
+
+        <SectionLayout>
+          <ZoomSection></ZoomSection>
+        </SectionLayout>
+
         <SectionLayout>
           <TextSection />
         </SectionLayout>
