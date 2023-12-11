@@ -74,10 +74,6 @@ export default function Home() {
         </SectionLayout>
 
         <SectionLayout>
-          <ZoomSection></ZoomSection>
-        </SectionLayout>
-
-        <SectionLayout>
           <TextSection />
         </SectionLayout>
         <Footer />

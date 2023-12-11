@@ -57,7 +57,7 @@ function ZoomSection() {
         <Image
           src="/images/arm2.jpg"
           alt="bulb tree"
-          className="absolute top-[10%] right-[3rem] rounded-[8px]"
+          className="absolute top-[10%] right-[3rem] rounded-[8px] w-[500px] h-[700px]"
           width={500}
           height={500}
           style={{
@@ -71,7 +71,7 @@ function ZoomSection() {
         <Image
           src="/images/arm.jpg"
           alt="bulb tree"
-          className="absolute top-[10%] left-[3rem] rounded-[8px] "
+          className="absolute top-[10%] left-[3rem] rounded-[8px]  w-[500px] h-[700px]"
           width={500}
           height={500}
           style={{
